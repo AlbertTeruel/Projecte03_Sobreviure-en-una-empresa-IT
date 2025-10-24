@@ -10,7 +10,16 @@ A nivell formatiu, *EverPia 2* vol consolidar coneixements de sistemes i xarxes,
 
 Aquest projecte no és només una pràctica tècnica, és una experiència immersiva en el món real de les empreses IT. Aprendreu que la serenitat és tan important com el coneixement, i que cada imprevist és part del procés. Perquè, com diuen a EverPia, **si pots sobreviure a això, pots sobreviure a qualsevol empresa**.
 
-🔥 *Benvinguts a EverPia 2: el foc està encès — i ara és el vostre torn d’agafar l’extintor i el teclat.*
+*Benvinguts a EverPia 2: el foc està encès — i ara és el vostre torn d’agafar l’extintor i el teclat.*
 
-##Tascas:
-- [Tasca01](T01/README.md) 
+### Tascas:
+- [Tasca01](T01/README.md) - [Tasca06](T06/README.md)
+- [Tasca02](T02/README.md) - [Tasca07](T07/README.md)
+- [Tasca03](T03/README.md) - [Tasca08](T08/README.md)
+- [Tasca04](T04/README.md) - [Tasca09](T09/README.md)
+- [Tasca05](T05/README.md) - [Tasca10](T10/README.md)
+
+### Productes
+- [Producte01](P01/README.md) - [Producte04](P04/README.md)
+- [Producte02](P02/README.md) - [Producte05](P05/README.md)
+- [Producte03](P03/README.md) - [Producte06](P06/README.md)
