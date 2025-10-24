@@ -13,4 +13,4 @@ Aquest projecte no és només una pràctica tècnica, és una experiència immer
 🔥 *Benvinguts a EverPia 2: el foc està encès — i ara és el vostre torn d’agafar l’extintor i el teclat.*
 
 ##Tascas:
-- [Tasca01](01/README.md) 
+- [Tasca01](T01/README.md) 
