@@ -11,3 +11,6 @@ A nivell formatiu, *EverPia 2* vol consolidar coneixements de sistemes i xarxes,
 Aquest projecte no és només una pràctica tècnica, és una experiència immersiva en el món real de les empreses IT. Aprendreu que la serenitat és tan important com el coneixement, i que cada imprevist és part del procés. Perquè, com diuen a EverPia, **si pots sobreviure a això, pots sobreviure a qualsevol empresa**.
 
 🔥 *Benvinguts a EverPia 2: el foc està encès — i ara és el vostre torn d’agafar l’extintor i el teclat.*
+
+##Tascas:
+- [Tasca01](01/README.md) 
