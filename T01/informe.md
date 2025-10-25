@@ -107,3 +107,5 @@ Un gestor de contrasenyes és una eina que guarda totes les nostres contrasenyes
 
 Encara que KeePassXC ofereix màxim control i privacitat, la seva sincronització manual i major complexitat el fan menys pràctic per a un equip tècnic que necessita agilitat i col·laboració. En el context d'una empresa que acaba de patir un incident de seguretat per contrasenyes febles, la prioritat és garantir una adopció ràpida i efectiva d'un gestor de contrasenyes, i Bitwarden compleix millor aquest objectiu.
 
+
+[Tornar](README.md) 
