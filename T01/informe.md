@@ -25,7 +25,6 @@ Un gestor de contrasenyes és una eina que guarda totes les nostres contrasenyes
 
 ## Comparativa Tècnica
 
-A continuació es presenta una taula comparativa entre les dues opcions principals per a l'equip tècnic d'EverPia:
 
 | **Característica** | **Bitwarden (Online/Núvol)** | **KeePassXC (Offline/Local)** |
 |-------------------|------------------------------|-------------------------------|
