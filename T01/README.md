@@ -9,10 +9,9 @@ En resposta, la Direcció Tècnica ha decidit que tot el personal tècnic ha d�
 La tasca encomanada als becaris consisteix en:
 
 1. **Fase 1 – Anàlisi i Justificació:** Elaborar un informe tècnic que expliqui per què les contrasenyes febles són un risc, compari les opcions de gestors de contrasenyes (Bitwarden i KeePassX/KeePassXC) i faci una recomanació sobre quina eina hauria d’utilitzar el personal tècnic.
+- [Informe](informe.md) 
 
-2. **Fase 2 – Guia d’Ús Tècnica:** Crear un manual operatiu per a l’eina seleccionada, amb instruccions pas a pas, captures de pantalla, gestió de contrasenyes segures, ús d’emplenament automàtic i recomanacions per a còpies de seguretat.
-
-- [Informe](informe.md)  
+2. **Fase 2 – Guia d’Ús Tècnica:** Crear un manual operatiu per a l’eina seleccionada, amb instruccions pas a pas, captures de pantalla, gestió de contrasenyes segures, ús d’emplenament automàtic i recomanacions per a còpies de seguretat. 
 - [Guia](guia.md)  
 
 [Torna](../)
