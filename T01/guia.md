@@ -226,3 +226,4 @@ Si prefereixes tenir el backup al núvol (per poder accedir-hi des de diferents 
 
 
 
+[Tornar](README.md) 
