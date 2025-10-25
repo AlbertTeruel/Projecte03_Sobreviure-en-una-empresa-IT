@@ -1,4 +1,4 @@
-# Context de la Tasca: Gestió de Contrasenyes a EverPia
+Gestió de Contrasenyes a EverPia
 
 EverPia, la consultora on treballeu com a becaris, ha patit un atac cibernètic que ha provocat una fuita d’informació crítica. Dades confidencials d’un projecte en desenvolupament han caigut en mans de ciberdelinqüents, que amenacen amb fer-les públiques si no es paga un rescat. 
 
