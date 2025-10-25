@@ -12,5 +12,5 @@ La tasca encomanada als becaris consisteix en:
 
 2. **Fase 2 – Guia d’Ús Tècnica:** Crear un manual operatiu per a l’eina seleccionada, amb instruccions pas a pas, captures de pantalla, gestió de contrasenyes segures, ús d’emplenament automàtic i recomanacions per a còpies de seguretat.
 
-- [Informe](informe/README.md)  
-- [Guia](guia/README.md)  
+- [Informe](informe.md)  
+- [Guia](guia.md)  
