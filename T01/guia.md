@@ -7,17 +7,18 @@ Aquesta guia t'ajudarà a començar a utilitzar Bitwarden pas a pas. No et preoc
 ### Pas 1: Crear un compte a Bitwarden
 
 1. Ves a la pàgina web oficial: **https://bitwarden.com**
-2. Fes clic al botó **"Get Started"** o **"Crear compte gratuït"**
-3. Omple el formulari amb les teves dades:
+2. Fes clic al botó **"Get Started"**
+3. Omple el formulari:
    - **Correu electrònic**: Usa el teu email corporatiu d'EverPia
    - **Nom**: El teu nom complet
    - **Contrasenya mestra**: Aquesta és la contrasenya més important que crearàs!
+  
+
 
 **Important sobre la contrasenya mestra:**
 - Ha de ser llarga (mínim 12-16 caràcters)
 - Ha de combinar lletres majúscules, minúscules, números i símbols
 - Ha de ser única i que no hagis utilitzat mai en cap altre lloc
-- **Guarda-la bé!** Si la perds, no podràs recuperar el teu compte
 - Exemple de bona contrasenya mestra: `Ev3rP!a-S3gur3t@t-2025`
 
 4. Marca la casella d'acceptar els termes i fes clic a **"Create Account"**
