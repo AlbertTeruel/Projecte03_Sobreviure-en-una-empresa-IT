@@ -106,7 +106,9 @@ Imagina que has de desar les credencials del teu correu corporatiu d'Outlook.
    - **Notes**: Camp opcional per afegir informació addicional, com "Compte principal de correu de feina"
 4. Fes clic a **"Save"** (Desar) a la part inferior
 
-![Primera part del menú per guardar credencials](img/entra1.png) ![Segona part del menú per guardar credencials](img/entra2.png)
+![Primera part del menú per guardar credencials](img/entra1.png)
+
+![Segona part del menú per guardar credencials](img/2ent2.png)
 
 **Mètode 2: Des del navegador (auto-desar)**
 
