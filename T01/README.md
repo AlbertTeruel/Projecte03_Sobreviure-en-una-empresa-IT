@@ -14,3 +14,5 @@ La tasca encomanada als becaris consisteix en:
 
 - [Informe](informe.md)  
 - [Guia](guia.md)  
+
+[Torna](../)
