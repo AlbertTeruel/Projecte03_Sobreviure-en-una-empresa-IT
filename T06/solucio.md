@@ -9,7 +9,7 @@
 dig xtec.cat A
 ```
 
-(imagen)
+![Resultat comanda dig xtec.cat A](img/1.png)
 
 **Anàlisi:**
 - **IP de resposta:** 83.247.151.214
@@ -25,13 +25,14 @@ dig xtec.cat A
 dig tecnocampus.cat NS
 ```
 
-(imagen)
+![Resultat comanda dig tecnocampus.cat NS](img/2.png)
 
 **Anàlisi:**
 - **Servidors de noms autoritatius:**
-  - [Servidor 1]
-  - [Servidor 2]
-  - [Altres servidors si n'hi ha]
+  - ns-1071.awsdns-05.org
+  - ns-1689.awsdns-19.co.uk
+  - ns-130.awsdns-16.com
+  - ns-535.awsdns-02.net
 
 ---
 
@@ -42,12 +43,16 @@ dig tecnocampus.cat NS
 dig escolapia.cat SOA
 ```
 
-(imagen)
+![Resultat comanda dig escolapia.cat SOA](img/3.png)
 
 **Anàlisi:**
-- **Email de l'administrador:** [Indicar el correu]
-- **Número de sèrie del domini:** [Indicar el número]
-- **Altres dades SOA importants:** [Serial, Refresh, Retry, Expire, Minimum TTL]
+- **Email de l'administrador:** root.dns1.nominalia.com
+- **Número de sèrie del domini:** 1761028965
+- **Altres dades SOA importants:** 
+  - Refresh: 86400
+  - Retry: 7200
+  - Expire: 2592000
+  - Minimum TTL: 300
 
 ---
 
@@ -58,11 +63,20 @@ dig escolapia.cat SOA
 dig -x 147.83.2.135
 ```
 
-(imagen)
+![Resultat comanda dig -x 147.83.2.135](img/4.png)
 
 **Anàlisi:**
-- **Informació obtinguda:** [Nom de host associat a la IP, altres registres]
-- **Tipus de registre:** [PTR o altres]
+- **Informació obtinguda:**
+  - upc.cat
+  - masters.upc.edu
+  - edicioweb.produccio.upc.edu
+  - upc.edu
+  - www.upc.es
+  - barcelonatech-upc.eu
+  - barcelonatech.upc.edu
+  - saladepremsa.upc.edu
+  
+- **Tipus de registre:** PTR
 
 ---
 
@@ -77,11 +91,11 @@ nslookup
 > tecnocampus.cat
 ```
 
-(imagen)
+![Resultat de las comandas anteriors ](img/5.png)
 
 **Anàlisi:**
 - **Per què la resposta és no autoritativa?**
-  - La resposta és no autoritativa perquè [explicar que vient d'un resolver intermediari i no del servidor autoritatiu del domini]
+  - La resposta és no autoritativa perquè prové d’un resolver intermediari (una memòria cau DNS) i no directament del servidor autoritatiu del domini.
   - El servidor que respon no és el servidor oficial responsable de tecnocampus.cat
 
 ---
@@ -90,19 +104,19 @@ nslookup
 
 **Comandes executades en mode interactiu:**
 ```
-> server [IP del primer servidor de noms obtingut en dig]
+> server 205.251.196.47
 > set type=A
 > tecnocampus.cat
-> exit
 ```
 
-(imagen)
+![Resultat de las comandas anteriors ](img/6.png)
 
 **Anàlisi:**
 - **Diferències respecte a la comanda 1:**
-  - Ara la resposta apareix com **autoritativa** (Authoritative answer)
-  - La resposta ve directament del servidor oficial del domini
-  - [Altres diferències observades: TTL, servidor que respon, etc.]
+  - Ara la resposta és autoritativa, ja que prové directament del servidor DNS 205.251.196.47, que és un servidor autoritatiu per al domini.
+  - La informació no prové d’un resolver intermediari sinó del servidor oficial del domini tecnocampus.cat.
+  - Les adreces IP retornades són diferents (ara comencen per 108.157.113.*).
+  - També canvia el servidor que respon (abans era 127.0.0.53, ara és 205.251.196.47).
 
 ---
 
@@ -111,17 +125,17 @@ nslookup
 ### Prova 1: Resolució via /etc/hosts
 
 **Pasos realitzats:**
-1. Editar el fitxer `/etc/hosts` (o `C:\Windows\System32\drivers\etc\hosts` a Windows)
-2. Afegir una entrada local, per exemple:
+1. Editar el fitxer `/etc/hosts`
+2. Afegir una entrada local:
 ```
-192.168.1.100  servidor-local.local
+127.0.1.1  servidor-local.local
 ```
 3. Comprovar que es resol correctament:
 ```
 ping servidor-local.local
 ```
 
-(imagen)
+![Resultat de editar el fitxer i fe un ping ](img/7.png)
 
 **Anàlisi:**
 - La resolució funciona sense necessitat de servidor DNS
@@ -136,7 +150,7 @@ ping servidor-local.local
 ping nom-equip.local
 ```
 
-(imagen)
+![Resultat de editar el fitxer i fe un ping ](img/8.png)
 
 **Anàlisi:**
 - mDNS permet resoldre noms locals sense DNS central
