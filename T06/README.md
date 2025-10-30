@@ -12,9 +12,9 @@ dig xtec.cat A
 (imagen)
 
 **Anàlisi:**
-- **IP de resposta:** [Indicar la IP obtinguda]
-- **Valor TTL:** [Indicar el TTL obtingut]
-- **Servidor que ha respost:** [Indicar quin servidor ha respost la consulta]
+- **IP de resposta:** 83.247.151.214
+- **Valor TTL:** 3600 segundos
+- **Servidor que ha respost:** 127.0.0.53
 
 ---
 
