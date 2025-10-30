@@ -78,4 +78,4 @@ Heu de crear un document `guia.md` amb els resultats, captures i explicacions de
 
 
 Activitats:
-- a
+- [Guia](solucio.md) 
