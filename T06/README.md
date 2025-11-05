@@ -79,4 +79,4 @@ Heu de crear un document `guia.md` amb els resultats, captures i explicacions de
 
 Activitats:
 - [Guia](guia.md)
-- [Guia](https://drive.google.com/file/d/1O1oCDegycsw5eDMjtRGF6c7-aekgpmwL/view?usp=sharing) 
+- [Video](https://drive.google.com/file/d/1O1oCDegycsw5eDMjtRGF6c7-aekgpmwL/view?usp=sharing) 
