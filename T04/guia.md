@@ -12,14 +12,14 @@ Abans de començar, necessitem verificar que la màquina virtual està ben confi
 
 ### Pas 1: Configurar el Nom del Servidor
 
-El nom del servidor ha de ser `server.innovatech22.test`.
+El domini del servidor ha de ser `server.innovatech22.test`.
 
 Per comprovar-lo:
 ```bash
-hostname
+hostname -f
 ```
 
-![Resultat comanda dig xtec.cat A](img/1.png)
+![](img/1.png)
 
 ### Pas 2: Verificar les Interfaces de Xarxa
 
@@ -47,9 +47,9 @@ Executem la comanda d'instal·lació:
 sudo apt install slapd ldap-utils
 ```
 
-Durant l'instal·lació, et demanarà una contrasenya d'administrador. Utilitza: `p@ssw0rd`
+Durant l'instal·lació, et demanarà una contrasenya d'administrador.
 
-(imatge)
+![](img/2.png)
 
 ### Pas 5: Validar la Instal·lació
 
@@ -60,7 +60,7 @@ sudo slapcat
 
 Aquesta comanda mostrarà la base de dades de LDAP actual.
 
-(imatge)
+![](img/3.png)
 
 ---
 
@@ -75,9 +75,7 @@ Per comprovar-la:
 sudo ldapsearch -x -b "dc=innovatech22,dc=test"
 ```
 
-Canvia `innovatech22` pel teu número de llista.
-
-(imatge)
+![](img/4.png)
 
 ### Pas 7: Crear les Unitats Organitzatives (OU)
 
@@ -91,14 +89,16 @@ Dins del fitxer, escriu el següent:
 ```
 dn: ou=users,dc=innovatech22,dc=test
 objectClass: organizationalUnit
+objectClass: top
 ou: users
 
 dn: ou=groups,dc=innovatech22,dc=test
 objectClass: organizationalUnit
+objectClass: top
 ou: groups
 ```
 
-(imatge)
+![](img/5.png)
 
 Desa el fitxer amb `Ctrl+X`, después `Y` i `Enter`.
 
@@ -111,16 +111,14 @@ sudo ldapadd -x -D "cn=admin,dc=innovatech22,dc=test" -W -f ou.ldif
 
 Et demanarà la contrasenya.
 
-(imatge)
+![](img/6.png)
 
 ### Pas 9: Verificar les OUs Creades
 
 Per comprovar que les unitats organitzatives s'han creat correctament:
 ```bash
-sudo ldapsearch -x -b "dc=innovatech22,dc=test" -H ldap:/// objectClass=organizationalUnit
+ldapsearch -xLLL -b "dc=innovatech22,dc=test"
 ```
-
-(imatge)
 
 ---
 
@@ -134,51 +132,42 @@ LAM és una eina web que facilita la gestió d'usuaris i grups sense haver de fe
 sudo apt install ldap-account-manager
 ```
 
-(imatge)
 
 ### Pas 11: Accedir a LAM des de l'Ordinador Principal
 
 Obres el navegador web de l'ordinador principal i vas a:
 ```
-http://192.168.X.X/lam
+http://192.168.56.101/lam
 ```
 
-On `192.168.X.X` és l'adreça IP de la interfície Host-Only del servidor.
-
-Per trobar aquesta adreça, executa al servidor:
-```bash
-ip addr
-```
-
-(imatge)
+![](img/7.png)
 
 ### Pas 12: Configurar LAM per Defecte
 
 Dins de LAM, configura els paràmetres per defecte perquè:
-- Els nous usuaris es guardin a l'OU `users`
-- Els nous grups es guardin a l'OU `groups`
+cn=admin,dc=innovatech,dc=test
 
-(imatge)
+![](img/8.png)
 
 ---
 
-## Part 5: Creació de Grups i Usuaris de Prova
+## Part 5: Creació de Grups i Usuaris
 
-### Pas 13: Crear els Grups de Seguretat
+### Pas 13: Crear els grups
 
 Dins de LAM, creem dos grups:
 1. **tech**: Un grup per als tècnics
 2. **manager**: Un grup per als gestors
 
-(imatge)
+![](img/9.png)
 
-### Pas 14: Crear els Usuaris de Prova
+### Pas 14: Crear els usuaris
 
 Creem dos usuaris:
 1. **tech01**: Pertany al grup `tech`
 2. **manager01**: Pertany al grup `manager`
 
-(imatge)
+![](img/10.png)
 
 ---
 
@@ -190,8 +179,6 @@ Ara configurem una màquina client que es connectarà al servidor LDAP.
 
 Instal·la una nova màquina virtual amb Ubuntu Desktop. Assegura't que la interfície de xarxa es connecta a la mateixa xarxa Host-Only que el servidor.
 
-(imatge)
-
 ### Pas 16: Configurar la Resolució de Noms
 
 Dins de la màquina client, obrim l'arxiu d'hosts:
@@ -201,23 +188,25 @@ sudo nano /etc/hosts
 
 Afegim aquesta línia:
 ```
-192.168.X.X    server.innovatech22.test
+192.168.56.101    server.innovatech22.test
 ```
 
-On `192.168.X.X` és l'adreça IP de la interfície Host-Only del servidor.
 
-(imatge)
+![](img/11.png)
 
-Desa amb `Ctrl+X`, `Y` i `Enter`.
 
 ### Pas 17: Verificar la Connectivitat amb el Servidor
+
+Instal·lem el paquet ldap-utils
+
+![](img/12.png)
 
 Executem una comanda des del client per verificar que es pot connectar al servidor LDAP:
 ```bash
 ldapsearch -x -H ldap://server.innovatech22.test -b "dc=innovatech22,dc=test"
 ```
 
-(imatge)
+![](img/13.png)
 
 ### Pas 18: Instal·lar els Mòduls d'Autenticació
 
@@ -225,8 +214,19 @@ Instal·lem els paquets necessaris per permetre que els usuaris del LDAP es pugu
 ```bash
 sudo apt install libnss-ldap libpam-ldap nscd
 ```
+Configuracio:
 
-(imatge)
+![](img/14.png)
+![](img/15.png)
+![](img/16.png)
+![](img/17.png)
+![](img/18.png)
+![](img/19.png)
+![](img/20.png)
+
+Verificació:
+
+![](img/21.png)
 
 ### Pas 19: Configurar la Autenticació LDAP
 
@@ -241,26 +241,34 @@ Busca les línies que digan `passwd:`, `group:` i `shadow:` i afegeix `ldap` al 
 ```
 passwd:         files systemd ldap
 group:          files systemd ldap
-shadow:         files systemd ldap
+shadow:         files ldap
 ```
 
-(imatge)
+![](img/22.png)
 
-### Pas 20: Configurar les Connexions LDAP
+### Pas 20: Configuracions
 
-Modifiquem el fitxer `/etc/ldap/ldap.conf`:
+Modifiquem el fitxer `/etc/pam.d/common-password`:
 
 ```bash
-sudo nano /etc/ldap/ldap.conf
+sudo nano /etc/pam.d/common-password
 ```
 
-Afegim o modifiquem aquestes línies:
+Elimineu aquesta part d'una línia:
 ```
-BASE    dc=innovatech22,dc=test
-URI     ldap://server.innovatech22.test
+use_authtok
 ```
 
-(imatge)
+![](img/23.png)
+
+Ara editem l’arxiu /etc/pam.d/common-session i afegim la línia:
+
+```
+session optional       pam_mkhomedir.so skel=/etc/skel umask=077
+```
+
+![](img/24.png)
+
 
 ### Pas 21: Verificar que els Usuaris Són Visibles
 
@@ -268,39 +276,25 @@ Reinicia els serveis:
 ```bash
 sudo systemctl restart nscd
 ```
+![](img/25.png)
 
 Després verifica que els usuaris del LDAP són visibles:
 ```bash
-getent passwd | grep tech01
+getent passwd | tail
 ```
 
-(imatge)
+![](img/26.png)
 
 ### Pas 22: Prova d'Accés Final
 
-Reinicia la màquina client:
-```bash
-sudo reboot
-```
+Reinicia la màquina client
 
 Quan es reinicia, intenta connectar-te amb l'usuari `tech01` i la contrasenya que vam configurar. Si tot està bé, l'usuari hauria de poder connectar-se i crear automàticament la carpeta personal.
 
-(imatge)
+![](img/27.png)
 
----
+![](img/28.png)
 
-## Resum de les Tasques Completades
-
-| Tasca | Estat | Observacions |
-|-------|-------|--------------|
-| Instal·lació d'OpenLDAP | ✓ | Comanda slapcat validada |
-| Configuració del domini | ✓ | innovatech22.test |
-| Creació d'OUs | ✓ | users i groups |
-| Instal·lació de LAM | ✓ | Accés remot funcionant |
-| Creació de grups | ✓ | tech i manager |
-| Creació d'usuaris | ✓ | tech01 i manager01 |
-| Configuració del client | ✓ | Ubuntu Desktop |
-| Prova d'autenticació | ✓ | Accés amb tech01 |
 
 ---
 
