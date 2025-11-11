@@ -176,3 +176,4 @@ Quan es reinicia, intenta connectar-te amb l'usuari `tech01` i la contrasenya qu
 
 ---
 
+[Tornar](README.md) 
