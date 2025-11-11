@@ -12,14 +12,14 @@ Abans de començar, necessitem verificar que la màquina virtual està ben confi
 
 ### Pas 1: Configurar el Nom del Servidor
 
-El nom del servidor ha de ser `server.innovatechXX.test` (on XX és el teu número de llista).
+El nom del servidor ha de ser `server.innovatech22.test`.
 
 Per comprovar-lo:
 ```bash
 hostname
 ```
 
-(imatge)
+![Resultat comanda dig xtec.cat A](img/1.png)
 
 ### Pas 2: Verificar les Interfaces de Xarxa
 
@@ -27,13 +27,6 @@ Necessitem dues connexions de xarxa:
 
 1. **Interfície NAT**: Per accedir a Internet i descarregar paquets
 2. **Interfície Host-Only**: Per comunicar-se amb el client privat
-
-Per veure les interfícies:
-```bash
-ip addr
-```
-
-(imatge)
 
 ---
 
@@ -46,8 +39,6 @@ Primer, actualitzem els paquets del sistema:
 sudo apt update
 sudo apt upgrade
 ```
-
-(imatge)
 
 ### Pas 4: Instal·lar OpenLDAP
 
@@ -77,14 +68,14 @@ Aquesta comanda mostrarà la base de dades de LDAP actual.
 
 ### Pas 6: Configurar el Domini
 
-El domini de la nostra xarxa de prova ha de ser `innovatechXX.test`. Aquesta configuració es va a fer automàticament durant la instal·lació.
+El domini de la nostra xarxa de prova ha de ser `innovatech22.test`. Aquesta configuració es va a fer automàticament durant la instal·lació.
 
 Per comprovar-la:
 ```bash
-sudo ldapsearch -x -b "dc=innovatechXX,dc=test"
+sudo ldapsearch -x -b "dc=innovatech22,dc=test"
 ```
 
-Canvia `innovatechXX` pel teu número de llista.
+Canvia `innovatech22` pel teu número de llista.
 
 (imatge)
 
@@ -98,11 +89,11 @@ nano ou.ldif
 
 Dins del fitxer, escriu el següent:
 ```
-dn: ou=users,dc=innovatechXX,dc=test
+dn: ou=users,dc=innovatech22,dc=test
 objectClass: organizationalUnit
 ou: users
 
-dn: ou=groups,dc=innovatechXX,dc=test
+dn: ou=groups,dc=innovatech22,dc=test
 objectClass: organizationalUnit
 ou: groups
 ```
@@ -115,10 +106,10 @@ Desa el fitxer amb `Ctrl+X`, después `Y` i `Enter`.
 
 Executem la comanda per afegir les unitats que vam crear:
 ```bash
-sudo ldapadd -x -D "cn=admin,dc=innovatechXX,dc=test" -W -f ou.ldif
+sudo ldapadd -x -D "cn=admin,dc=innovatech22,dc=test" -W -f ou.ldif
 ```
 
-Et demanarà la contrasenya: `p@ssw0rd`
+Et demanarà la contrasenya.
 
 (imatge)
 
@@ -126,7 +117,7 @@ Et demanarà la contrasenya: `p@ssw0rd`
 
 Per comprovar que les unitats organitzatives s'han creat correctament:
 ```bash
-sudo ldapsearch -x -b "dc=innovatechXX,dc=test" -H ldap:/// objectClass=organizationalUnit
+sudo ldapsearch -x -b "dc=innovatech22,dc=test" -H ldap:/// objectClass=organizationalUnit
 ```
 
 (imatge)
@@ -210,7 +201,7 @@ sudo nano /etc/hosts
 
 Afegim aquesta línia:
 ```
-192.168.X.X    server.innovatechXX.test
+192.168.X.X    server.innovatech22.test
 ```
 
 On `192.168.X.X` és l'adreça IP de la interfície Host-Only del servidor.
@@ -223,7 +214,7 @@ Desa amb `Ctrl+X`, `Y` i `Enter`.
 
 Executem una comanda des del client per verificar que es pot connectar al servidor LDAP:
 ```bash
-ldapsearch -x -H ldap://server.innovatechXX.test -b "dc=innovatechXX,dc=test"
+ldapsearch -x -H ldap://server.innovatech22.test -b "dc=innovatech22,dc=test"
 ```
 
 (imatge)
@@ -265,8 +256,8 @@ sudo nano /etc/ldap/ldap.conf
 
 Afegim o modifiquem aquestes línies:
 ```
-BASE    dc=innovatechXX,dc=test
-URI     ldap://server.innovatechXX.test
+BASE    dc=innovatech22,dc=test
+URI     ldap://server.innovatech22.test
 ```
 
 (imatge)
@@ -303,7 +294,7 @@ Quan es reinicia, intenta connectar-te amb l'usuari `tech01` i la contrasenya qu
 | Tasca | Estat | Observacions |
 |-------|-------|--------------|
 | Instal·lació d'OpenLDAP | ✓ | Comanda slapcat validada |
-| Configuració del domini | ✓ | innovatechXX.test |
+| Configuració del domini | ✓ | innovatech22.test |
 | Creació d'OUs | ✓ | users i groups |
 | Instal·lació de LAM | ✓ | Accés remot funcionant |
 | Creació de grups | ✓ | tech i manager |
@@ -313,9 +304,3 @@ Quan es reinicia, intenta connectar-te amb l'usuari `tech01` i la contrasenya qu
 
 ---
 
-## Anotacions Finals
-
-- Recorda substituir `XX` pel teu número de llista en tots els comandos
-- Utilitza sempre la contrasenya `p@ssw0rd` quan se't demani
-- Si tenim problemes, comprova les adreces IP i assegura't que les dues màquines virtuals es poden veure entre elles
-- Fes captures de pantalla de cada pas important per documentar el treball
