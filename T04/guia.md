@@ -1,9 +1,5 @@
 # Guia d'Instal·lació del Servidor LDAP amb Ubuntu
 
-## Introducció
-
-En aquesta guia vamos a aprendre com instal·lar i configurar un servidor LDAP (OpenLDAP) en una màquina virtual Ubuntu Server. Aquest servidor es va a encarregar de guardar i gestionar tots els usuaris i grups de la nostra xarxa de prova.
-
 ---
 
 ## Part 1: Preparació de l'Infraestructura
