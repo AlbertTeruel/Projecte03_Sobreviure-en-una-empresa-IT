@@ -27,3 +27,7 @@ A més, configurareu un equip client per tal que utilitzi el directori per auten
 
 S’ha redactat un document on s’especifica clarament la feina que s’ha de desenvolupar, el teniu disponible en el plec de condicions tècniques (també el podeu trobar al Moodle de l’assignatura).
 
+- [Part 1: Preparació de l'Infraestructura](parte1.md)
+- [Part 2: Instal·lació d'OpenLDAP](parte2.md)
+- [Part 3: Configuració Bàsica d'OpenLDAP](parte3.md)
+- [Part 4: Instal·lació de LAM (Gestor d'Usuaris LDAP)](parte4.md)
