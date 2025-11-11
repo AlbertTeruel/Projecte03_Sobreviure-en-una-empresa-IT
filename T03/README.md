@@ -32,3 +32,5 @@ El treball serà en grup. En primer lloc, us dividireu en dos equips, un d’ell
 La documentació dels dos casos es farà en format Markdown, incloent imatges, explicacions, etc. dins una carpeta anomenada tasca03 dins del projecte. Com en casos anteriors, l’arxiu README.md de la carpeta, ha de contenir la descripció de la tasca i els enllaços per accedir als dos documents. 
 La nota de la tasca és conjunta al grup, per tant, organitzeu-vos i tingueu una bona comunicació interna.
 Penseu que posteriorment, haureu de presentar al client les conclusions de la vostra feina en una presentació conjunta.
+
+- [Linux: LVM amb Zorin OS](linux.md)
