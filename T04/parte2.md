@@ -35,3 +35,5 @@ Aquesta comanda mostrarà la base de dades de LDAP actual.
 ![](img/3.png)
 
 ---
+
+[Tornar](README.md) 
