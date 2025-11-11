@@ -25,3 +25,5 @@ Necessitem dues connexions de xarxa:
 2. **Interfície Host-Only**: Per comunicar-se amb el client privat
 
 ---
+
+[Tornar](README.md) 
