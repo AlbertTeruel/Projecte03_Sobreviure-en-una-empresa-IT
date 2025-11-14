@@ -46,34 +46,6 @@ Labbox passa de:
 
 ## 4. Model de negoci (CANVAS)
 
-Com Labbox Labware crea i ven valor:
-
-**Qui són els clients?**
-- Universitats, laboratoris públics, indústries químiques i farmacèutiques
-
-**Què li ofereix?**
-- Material de laboratori a bons preus, entrega ràpida i bon servei
-
-**Com ho ven?**
-- Per internet (web), distribuïdors, filials a França i Itàlia
-
-**Relació amb clients?**
-- Suport tècnic, catàlegs especialitzats, política de satisfacció o reembolso
-
-**Donde saca diners?**
-- Venent consumibles, equipament, productes químics i les seves marques pròpies (LYNX, LBX)
-
-**Que necessita?**
-- 6000+ productes al catàleg, almacens, web, gent comercial
-
-**Que fa principalment?**
-- Distribuir, vendre i donar servei als clients
-
-**Qui l'ajuda?**
-- Fabricants de productes químics i distribuïdors internacionals
-
-**Quanto li costa?**
-- Comprar productes, pagar logística, empleats, mantenir la web
 
 ---
 
