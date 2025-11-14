@@ -73,29 +73,7 @@ Com podrien usar IA:
 
 ## 7. DAFO - Punts forts i febles
 
-### Punts forts
-- L'empresa és antiga (2005) i la coneixen
-- Venen més de 6000 productes
-- Preus bons i política de "satisfacció o reembolso"
-- Distribueixen a més de 50 países
-- Tenen les seves marques pròpies (LYNX, LBX)
 
-### Punts febles
-- L'equip és petit (65-70 empleats) comparant amb empreses més grans
-- No està tan automatitzada com la competència internacional
-- Depèn molt dels distribuïdors en altres países
-
-### Oportunitats
-- Cada vegada hi ha més recerca i universitats (més clients potencials)
-- Internet permet vendre a nous mercats
-- Demanda de productes eco-friendly i sostenibles
-- Pots desenvolupar més marques pròpies
-
-### Amenaces
-- Hi ha competidors més grans internacionalment
-- Si l'economia cau, menys inversió en recerca
-- Les lleis europees canvien i pot afectar els productes químics
-- Els fabricants poden vendre directament online
 
 ---
 
@@ -125,7 +103,7 @@ Com podrien usar IA:
 - Preocupar-se pel medi ambient
 
 ### Imatge corporativa
-
+La imatge de Labbox Labware és una empresa moderna, en constant evolució, que combina tradició i innovació. El seu objectiu principal és projectar una imatge propera, fiable i professional, reflectint el seu compromís amb la qualitat, els preus justos i la rapidesa al servei. A més, estan en procés de renovar el seu aspecte visual per adaptar-se als temps i mantenir-se com una marca reconeixible i propera per als clients a tot el món. 
 <img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/6b709ba0-0503-4a9c-8539-eea825a03f2a" />
 
 ---
@@ -160,13 +138,12 @@ Ser l'empresa líder mundial en distribució de material de laboratori.
 
 - Segueix les normes europees sobre productes químics (REACH, ISO, RoHS)
 - Comunica amb honestitat amb clients i proveïdors
-- Té la política de "satisfacció o reembolso" - si no estàs content, et devuelvo els diners
-
+- Té la política de "satisfacció o reembolso" - si no estàs content, et tornen els diners
 ---
 
 ## 12. Conclusions i reflexions finals
 
-### Preguntes que t'has de fer:
+### Preguntes:
 
 **1. Per què Labbox pot aguantar en el futur?**
 Labbox té avantatges clars: és antiga, la coneixen, té preus bons i una xarxa internacional. Però necessita seguir innovant amb IA i nous productes.
@@ -190,5 +167,7 @@ Labbox permet que universitats i laboratoris tinguin material de qualitat a bons
 - Desenvolupar una app mòbil per fer comandes més fàcil
 - Crear una "green line" de productes eco-friendly amb preus justificats
 - Fer més vídeos explicatius dels productes
+
+Labbox és una empresa que ha sabut créixer i adaptar-se en un sector molt exigent. El seu èxit es basa en oferir bon servei, qualitat i preus justos, i en mantenir una relació propera amb clients i proveïdors. Tot i que el mercat canvia ràpidament, Labbox té bones oportunitats si continua innovant, apostant per la tecnologia i expandint-se a nous països. Amb aquests passos, podrà seguir sent una empresa útil i important per a la comunitat científica d’arreu del món.
 
 ---
