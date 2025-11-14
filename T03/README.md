@@ -1,4 +1,4 @@
-## T03: Gestió flexible de discos (LVM i Espais d’emmagatzematge)
+## T03: Gestió flexible de discos (LVM i Espais d’emmagatzematge) g
 
 Un cop superada la fase de formació, ja esteu preparats per afrontar el repte dels nostres clients. Com ja es va explicar, tenim un nou i important client, el bufet d’advocats Garriga i associats un dels més prestigiosos de la ciutat, ha requerit els serveis de la nostra consultora. Gestiona una gran quantitat d'informació legal sensible, per la qual cosa la integritat, la disponibilitat (alta redundància) i la facilitat de gestió del seu emmagatzematge són d'importància crítica.
 
