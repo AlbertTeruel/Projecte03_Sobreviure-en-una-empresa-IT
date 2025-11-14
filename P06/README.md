@@ -5,4 +5,4 @@ Doncs bé, aquest vídeo és un producte del qual podeu estar orgullosos i per t
 
 Tal com es va indicar a la tasca, pengeu el vídeo en alguna plataforma, per exemple, podeu Stream que forma part del vostre Office 365. Assegureu-vos de donar permisos de visualització.
 
-
+- [Video](https://drive.google.com/file/d/1O1oCDegycsw5eDMjtRGF6c7-aekgpmwL/view?usp=sharing) 
