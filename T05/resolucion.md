@@ -220,13 +220,3 @@ Labbox permet que universitats i laboratoris tinguin material de qualitat a bons
 - Fer més vídeos explicatius dels productes
 
 ---
-
-## Notes finals
-
-- Aquest informe ha de tenir 15-25 pàgines
-- Afegeix gràfics, taules i imatges per fer-lo més visual
-- Busca informació real de labbox.com
-- Si pots, intenta trobar notícies o dades de l'empresa online
-- Cuida la presentació: bona ortografia, format consistent
-
-**Final:** La conclusió ha de ser que Labbox Labware és viable, diferent de competidors grans per qualitat i servei, i que pot créixer si s'adapta a la digitalització i sostenibilitat.
