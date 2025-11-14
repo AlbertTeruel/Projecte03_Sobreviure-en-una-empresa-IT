@@ -14,7 +14,7 @@
 
 Primer, hem de crear dues particions en dos discos de 10 GB. En un entorn virtual, aquests discos els veurem com `/dev/sdb` i `/dev/sdc`.
 
-Particio el primer disc (si no està ja particionat)
+Particio el primer disc
 ```
 sudo fdisk /dev/sdb
 ```
