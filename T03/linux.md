@@ -6,7 +6,7 @@ Primer cal instal·lar els paquets necessaris per gestionar discos i LVM. També
 sudo apt update
 sudo apt install fdisk lvm2
 ```
-![](img/0.png) 
+![](img/0.PNG) 
 
 
 ## 2. Configuració inicial de LVM
@@ -23,28 +23,28 @@ sudo fdisk /dev/sdc
 # mateix procés
 sudo partprobe
 ```
-![](img/1.png)
+![](img/1.PNG)
 
 Creem els Physical Volumes (PV):
 
 ```
 sudo pvcreate /dev/sdb1 /dev/sdc1
 ```
-![](img/2.png)
+![](img/2.PNG)
 
 Creem el Volume Group (VG):
 
 ```
 sudo vgcreate vg_empresa /dev/sdb1 /dev/sdc1
 ```
-![](img/3.png)
+![](img/3.PNG)
 
 Creem un Logical Volume (LV) inicial de 8 GB:
 
 ```
 sudo lvcreate -L 8G -n lv_inicial vg_empresa
 ```
-![](img/4.png)
+![](img/4.PNG)
 
 Formategem i muntem el volum:
 
@@ -53,8 +53,8 @@ sudo mkfs.ext4 /dev/vg_empresa/lv_inicial
 sudo mkdir /mnt/inicial
 sudo mount /dev/vg_empresa/lv_inicial /mnt/inicial
 ```
-![](img/5.png)
-![](img/6.png)
+![](img/5.PNG)
+![](img/6.PNG)
 Perquè es munti automàticament en iniciar, afegim-lo a /etc/fstab i recarreguem la configuració:
 
 ```
@@ -64,7 +64,7 @@ sudo nano /etc/fstab
 sudo systemctl daemon-reload
 sudo mount -a
 ```
-![](img/7.png)
+![](img/7.PNG)
 
 ## 3. Alta disponibilitat (mirroring)
 
@@ -74,7 +74,7 @@ Creem un LV mirror per protegir la informació en cas de fallada d’un disc:
 sudo lvcreate -m1 -L 1G -n lvm_mirror vg_empresa
 sudo lvdisplay
 ```
-![](img/8.png)
+![](img/8.PNG)
 
 ## 4. Instantànies i discos addicionals
 
@@ -103,7 +103,7 @@ Afegim els discos al VG:
 sudo pvcreate /dev/sdd1 /dev/sde1
 sudo vgextend vg_empresa /dev/sdd1 /dev/sde1
 ```
-![](img/9.png)
+![](img/9.PNG)
 
 Creem el LV de dades amb un dels discos addicionals:
 
@@ -113,7 +113,7 @@ sudo mkfs.ext4 /dev/vg_empresa/lvm_dades
 sudo mkdir /mnt/dades
 sudo mount /dev/vg_empresa/lvm_dades /mnt/dades
 ```
-![](img/10.png)
+![](img/10.PNG)
 
 ## 5. Arxius de prova
 
@@ -135,7 +135,7 @@ Creem una instantània del volum de dades:
 sudo lvcreate -L 2G -s -n lv_snapshot /dev/vg_empresa/lvm_dades
 sudo lvs
 ```
-![](img/11.png)
+![](img/11.PNG)
 
 lv_snapshot guarda l’estat actual dels arxius i es pot utilitzar per restaurar-los.
 
@@ -147,7 +147,7 @@ Simulem la pèrdua de fitxers:
 sudo rm /mnt/dades/*.prueba
 ls /mnt/dades
 ```
-![](img/12.png)
+![](img/12.PNG)
 
 Desmuntem el volum:
 
@@ -160,7 +160,7 @@ Restaurar la snapshot:
 ```
 sudo lvconvert --merge /dev/vg_empresa/lv_snapshot
 ```
-![](img/13.png)
+![](img/13.PNG)
 
 Muntem de nou el volum:
 
@@ -171,7 +171,7 @@ ls /mnt/dades
 
 Ara els arxius carlos.prueba i marti.prueba tornen a estar disponibles.
 
-![](img/13_1.png)
+![](img/13_1.PNG)
 
 ## 8. Escalabilitat
 
@@ -184,6 +184,6 @@ sudo resize2fs /dev/vg_empresa/lvm_dades
 df -h
 ```
 
-![](img/14.png)
+![](img/14.PNG)
 
 Ara lvm_dades té més espai sense interrupcions.
