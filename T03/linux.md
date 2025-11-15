@@ -1,3 +1,6 @@
+# Linux: LVM amb Zorin OS
+
+
 ## 1. Preparar l’entorn
 
 Primer cal instal·lar els paquets necessaris per gestionar discos i LVM. També crearem dos discos virtuals de 10 GB que seran els que utilitzarem inicialment.
