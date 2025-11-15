@@ -34,3 +34,4 @@ La nota de la tasca és conjunta al grup, per tant, organitzeu-vos i tingueu una
 Penseu que posteriorment, haureu de presentar al client les conclusions de la vostra feina en una presentació conjunta.
 
 - [Linux: LVM amb Zorin OS](linux.md)
+- [Windows: Espais d'Emmagatzematge (Storage Spaces)](windows.md)
